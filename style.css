@@ -1,3 +1,11 @@
+/* Color Scheme:
+ * #008AAF Blue (Munsel)
+ * #EFF0F2 Anti-Flash White
+ * #2A2438 Gunmetal
+ * #2393E5 Bleu de France
+ * #3E483C Rifle Green
+ */
+
 html {
   box-sizing: border-box;
 }
@@ -9,33 +17,192 @@ body {
 }
 
 #main {
-  background-image: url("http://imgur.com/QnVml6L.png");
+  background-image: url("http://imgur.com/cZ2QmzD.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
+  margin: 25px 40px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.header h1 {
+.logo img {
+  height: 80px;
+  width: 80px;
+}
+
+.title h2 {
   font-family: 'Cabin', sans-serif;
+  font-size: 45px;
+  font-weight: lighter;
   color: #2A2438;
 }
 
-.staff {
+input {
+  display: none;
+}
+
+#hamburger-menu {
+  position: relative;
+  height: 45px;
+  width: 60px;
+  align-items: center;
+  padding-right: 25px;
+  z-index: 100;
+}
+
+#hamburger-menu .hamburger {
+  position: absolute;
+  background-color: #2A2438;
+  height: 5px;
+  width: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#line1 {
+  top: 0px;
+}
+
+#line2 {
+  top: 15px;
+}
+
+#line3 {
+  top: 30px;
+}
+
+.nav {
+  top: 0;
+  left: 100vw;
+  height: 100vh;
+  width: 25vw;
+  background-color: rgba(40, 40, 40, 0.25);
+  position: absolute;
+  transition: left 1s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+#toggle-menu:checked ~ div {
+  left: 75vw;
+}
+
+.nav-options  {
+  list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-top: 150px;
 }
 
-.staff span {
-  border-top: 1px solid black;
+.nav-options .nav-item {
+  padding: 25px 40px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 30px;
+  color: #2A2438;
+}
+
+.nav-options .nav-item:hover {
+  background-color: rgba(40, 40, 40, 0.2);
+}
+
+.ellipse {
+  position: absolute;
+  top: 521px;
+  left: 109px;
+}
+
+.ellipse a i {
+  color: rgba(42, 36, 56, 1);
+}
+
+i.ellipse-dot {
+  font-size: 2px;
+  width: 4px;
+  height: 4px;
+  margin: -2px;
+  background-color: rgba(42, 36, 56, 1);
+}
+
+.text {
+  margin-top: 50px;
+  align-self: center;
+  font-family: 'Rokkitt', serif;
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text h1 {
+  color: #2A2438;
+  margin: 10px;
+}
+
+.text .line {
+  border-top: 5px solid #2A2438;
+  width: 100px;
+}
+
+.text .dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 20px;
+}
+
+.text .dots .dotcontainer {
+  height: 20px;
+  width: 20px;
+  margin: 0 15px;
+}
+
+.text .dots .dotcontainer .dot {
+  background-color: #2A2438;
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  transition-duration: 0.5s;
   margin-top: 6px;
+  margin-left: 6px;
+}
+
+.text .dots .dotcontainer .active {
+  height: 12px;
+  width: 12px;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+.button {
+  align-self: center;
+  margin-top: 15vh;
+}
+
+.button button {
+  border: 3px solid #EFF0F2;
+  border-radius: 7px;
+  width: 160px;
+  height: 70px;
+  background: none;
+  background-color: rgba(#EFF0F2, 0.0);
+  color: #EFF0F2;
+  font-family: 'Cabin' sans-serif;
+  font-size: 30px;
+  transition-duration: .5s;
+}
+
+.button button:hover {
+  background: rgba(240, 241, 242, 0.5);
+  transform: scale(1.05);
 }
