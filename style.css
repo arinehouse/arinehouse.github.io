@@ -16,6 +16,10 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 #main {
   background-image: url("http://imgur.com/cZ2QmzD.jpg");
   background-size: 100% 100%;
@@ -24,6 +28,38 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.nav-items {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+
+.nav-items a {
+  color: #EFF0F2;
+}
+
+.nav-items .active {
+  border-bottom: 2px solid #EFF0F2;
+}
+
+.nav-item {
+  margin: 10px 20px;
+  font-size: 15pt;
+  border-bottom: 2px solid rgba(0,0,0,0);
+}
+
+.nav-item:hover {
+  border-bottom: 2px solid #EFF0F2;
 }
 
 .header {
@@ -79,7 +115,7 @@ input {
   top: 30px;
 }
 
-.nav {
+.burger {
   top: 0;
   left: 100vw;
   height: 100vh;
@@ -95,7 +131,7 @@ input {
   left: 75vw;
 }
 
-.nav-options  {
+.burger-options  {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -103,14 +139,14 @@ input {
   margin-top: 150px;
 }
 
-.nav-options .nav-item {
+.burger-options .burger-item {
   padding: 25px 40px;
   font-family: 'Cabin', sans-serif;
   font-size: 30px;
   color: #2A2438;
 }
 
-.nav-options .nav-item:hover {
+.burger-options .burger-item:hover {
   background-color: rgba(40, 40, 40, 0.2);
 }
 
@@ -205,4 +241,87 @@ i.ellipse-dot {
 .button button:hover {
   background: rgba(240, 241, 242, 0.5);
   transform: scale(1.05);
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #EFF0F2;
+  font-family: 'Cabin', sans-serif;
+}
+
+.background {
+  position: absolute;
+  height: 240%;
+  width: 120%;
+  z-index: -999;
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("http://imgur.com/cZ2QmzD.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(20px);
+}
+
+.portfolio-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.portfolio-header h1 {
+  font-size: 40pt;
+}
+
+.portfolio-header p {
+  font-size: 20pt;
+}
+
+.portfolio-header a {
+  color: #EFF0F2;
+  transition-duration: 0.5s;
+}
+
+.portfolio-header p a:hover {
+  color: rgb(56, 104, 249);
+}
+
+.portfolio .line {
+  border-top: 5px solid #EFF0F2;
+  width: 300px;
+}
+
+.portfolio-item {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.music {
+  width: 60vw;
+}
+
+.portfolio-item .thumbnail img {
+  height: 300px;
+  width: 500px;
+  margin: 30px;
+}
+
+.portfolio-item .description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 30px;
+}
+
+.portfolio-item .description h2 {
+  font-size: 25pt;
+}
+
+.portfolio-item .description p {
+  font-size: 15pt;
 }

@@ -12,7 +12,7 @@ $(document).ready(function() {
         $('#line1').animate({left: 0, top: '15px', opacity: 1}, 400);
         $('#line2').css({left: '-30px', top: '-15px', transform: 'rotate(45deg)'});
         $('#line2').animate({left: 0, top: '15px', opacity: 1}, 400);
-      }, 450);
+      }, 500);
       menuHidden = false;
     } else {
       $('#line1').animate({left: '-30px', top: '40px', opacity: 0}, 400);
