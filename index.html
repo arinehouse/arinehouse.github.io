@@ -11,7 +11,7 @@
     <div id="main">
       <div class="header">
         <div class="logo">
-          <img src="./images/logo.svg" />
+          <img class="logo" />
         </div>
         <div class="title">
           <h2>Adam Rinehouse</h2>
@@ -24,7 +24,7 @@
         <input type="checkbox" id="toggle-menu">
         <div class="burger">
           <div class="burger-options">
-            <div class="burger-item">About</div>
+            <a href="/about.html"><div class="burger-item">About</div></a>
             <a href="/projects.html"><div class="burger-item">Projects</div></a>
             <a href="/music.html"><div class="burger-item">Music</div></a>
             <a href="/contact.html"><div class="burger-item">Contact</div></a>
@@ -40,19 +40,18 @@
         </div>
       </div>
       <div class="text">
-        <h1>I Make</h1>
+        <h1 id="i-make">I Make</h1>
         <span class="line"></span>
-        <h1 class='imake'>Websites</h1>
+        <h1 class='things-i-make'>Websites</h1>
         <div class="dots">
-          <div class='dotcontainer'><div id="dot1" class="dot active"></div></div>
+          <div class='dotcontainer'><div id="dot0" class="dot active"></div></div>
+          <div class='dotcontainer'><div id="dot1" class="dot"></div></div>
           <div class='dotcontainer'><div id="dot2" class="dot"></div></div>
           <div class='dotcontainer'><div id="dot3" class="dot"></div></div>
-          <div class='dotcontainer'><div id="dot4" class="dot"></div></div>
-          <div class='dotcontainer'><div id="dot5" class="dot"></div></div>
         </div>
       </div>
       <div class="button">
-        <button href="#">Dive In</button>
+        <a href="/about.html"><button>Dive In</button></a>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
