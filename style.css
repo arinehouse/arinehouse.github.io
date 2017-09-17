@@ -288,6 +288,15 @@ i.ellipse-dot {
   font-size: 20pt;
 }
 
+.score-link {
+  color: #EFF0F2;
+  transition-duration: 0.5s;
+}
+
+.score-link:hover {
+  color: rgb(56, 104, 249);
+}
+
 .portfolio-header a {
   color: #EFF0F2;
   transition-duration: 0.5s;
