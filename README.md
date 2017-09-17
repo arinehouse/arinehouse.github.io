@@ -1,3 +1,3 @@
 # adam.rine.house
 
-A personal website for Adam Rinehouse, made by Adam Rinehouse.
+A personal website by and for Adam Rinehouse.
