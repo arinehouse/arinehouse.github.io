@@ -33,6 +33,7 @@ a {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100vw;
 }
 
@@ -69,7 +70,16 @@ nav {
   justify-content: space-between;
 }
 
-.logo img {
+.logo {
+  padding-left: 25px;
+}
+
+.logo-sm img {
+  height: 60px;
+  width: 60px;
+}
+
+.logo-md img {
   height: 80px;
   width: 80px;
 }
@@ -91,6 +101,7 @@ input {
   width: 60px;
   align-items: center;
   padding-right: 25px;
+  padding-left: 15px;
   z-index: 100;
 }
 
