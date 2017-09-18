@@ -14,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -28,6 +29,7 @@ a {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 nav {
@@ -180,7 +182,6 @@ i.ellipse-dot {
 }
 
 .text {
-  margin-top: 50px;
   align-self: center;
   font-family: 'Rokkitt', serif;
   font-size: 35px;
@@ -233,10 +234,10 @@ i.ellipse-dot {
 
 .button {
   align-self: center;
-  margin-top: 15vh;
 }
 
 .button button {
+  margin-bottom: 20vh;
   border: 3px solid #EFF0F2;
   border-radius: 7px;
   width: 160px;
@@ -264,7 +265,7 @@ i.ellipse-dot {
 
 .background {
   position: absolute;
-  height: 240%;
+  height: 1800px;
   width: 120%;
   z-index: -999;
   background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("http://imgur.com/cZ2QmzD.jpg");
@@ -350,6 +351,7 @@ i.ellipse-dot {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .contact-options p {

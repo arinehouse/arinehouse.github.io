@@ -69,34 +69,35 @@ $(document).ready(function() {
     switch (index) {
       case 0:
         if (word === 'Websites') return;
-        else if (word === 'Something Happen') {
+        else if (word === 'History') {
           flag = true;
         }
         word = 'Websites'
         break;
       case 1:
         if (word === 'Music') return;
-        else if (word === 'Something Happen') {
+        else if (word === 'History') {
           flag = true;
         }
         word = 'Music'
         break;
       case 2:
-        if (word === 'Stories') return;
-        else if (word === 'Something Happen') {
+        if (word === 'Memories') return;
+        else if (word === 'History') {
           flag = true;
         }
-        word = 'Stories';
+        word = 'Memories';
         break;
       case 3:
-        word = 'Something Happen';
+        if (word === 'History') return;
+        word = 'History';
         break;
       default:
         word = 'Websites';
     }
 
     $('.things-i-make').animate({marginLeft: '40px', opacity: '0'}, 500);
-    if (flag || word === 'Something Happen'){
+    if (flag || word === 'History'){
       $('#i-make').animate({marginLeft: '40px', opacity: '0'}, 500);
     }
     setTimeout(function() {
@@ -105,7 +106,7 @@ $(document).ready(function() {
       if (flag) {
         $('#i-make').css({marginLeft: 0, marginRight: '40px'}).html('I Make');
         $('#i-make').animate({marginRight: 0, opacity: 1}, 500);
-      } else if (word == 'Something Happen') {
+      } else if (word == 'History') {
         $('#i-make').css({marginLeft: 0, marginRight: '40px'}).html('Let\'s Make');
         $('#i-make').animate({marginRight: 0, opacity: 1}, 500);
       }
