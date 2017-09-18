@@ -351,7 +351,6 @@ i.ellipse-dot {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
 }
 
 .contact-options p {
