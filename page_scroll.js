@@ -15,15 +15,12 @@ $(window).on('load', function() {
       setOpacityForAllExcept(curIndex, 0);
       curIndex = $(this).index();
     }
-    
+
     // cycle to the other section
     cycleSections(curSection, curIndex).then(function() {
       resetPages(curIndex);
       placeUnderbar(curIndex, false);
       setOpacityForAllExcept(curIndex, 1);
-
-      // allow vertical scrolling
-      $('body').css({ 'overflow-y': 'scroll' });
     });
     curSection = (curSection + 1) % 2
   });
@@ -75,11 +72,13 @@ var cycleSections = function(section, index) {
       $('.port-pages').animate({ left: 0 }, 700);
       $('#' + pages[index]).animate({ left: 0 }, 700);
       $('#home').animate({ left: '-100%' }, 700, function() { resolve() });
+      $('body').css({ 'overflow-y': 'scroll' });
     } else {
       // current section is portfolio, scroll left to main section
       $('.port-pages').animate({ left: '100%' }, 700);
       $('#' + pages[index]).animate({ left: '100%' }, 700);
       $('#home').animate({ left: 0 }, 700, function() { resolve() });
+      $('body').css({ 'overflow-y': 'hidden' });
     }
   });
 };
