@@ -5,7 +5,7 @@ var currentIndex = 0;
 var clockID;
 var interval = 3.5; // unit in seconds for the change of words on the front page
 
-$(document).ready(function() {
+$(window).on('load', function() {
   tickThrough();
 
   $('#hamburger-menu').on('click', function() {
