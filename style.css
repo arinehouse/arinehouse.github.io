@@ -21,7 +21,7 @@ a {
 }
 
 #home {
-  background-image: url("http://imgur.com/cZ2QmzD.jpg");
+  background-image: url("images/bg-main.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 100vh;
@@ -303,7 +303,7 @@ i.ellipse-dot {
   height: 1800px;
   width: 100%;
   z-index: -999;
-  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("http://imgur.com/cZ2QmzD.jpg");
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("images/bg-main.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(20px);
