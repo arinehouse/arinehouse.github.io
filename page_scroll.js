@@ -7,10 +7,20 @@ var pages = ['about', 'projects', 'music', 'contact'];
 
 $(window).on('load', function() {
   $('.page-trigger').on('click', function() {
-    curIndex = $(this).index();
+
+    if ($(this).siblings('.page-trigger').length > 0) {
+      curIndex = $(this).index();
+      setOpacityForAllExcept(curIndex, 0);
+    } else {
+      setOpacityForAllExcept(curIndex, 0);
+      curIndex = $(this).index();
+    }
+    
+    // cycle to the other section
     cycleSections(curSection, curIndex).then(function() {
       resetPages(curIndex);
       placeUnderbar(curIndex, false);
+      setOpacityForAllExcept(curIndex, 1);
 
       // allow vertical scrolling
       $('body').css({ 'overflow-y': 'scroll' });
@@ -64,14 +74,13 @@ var cycleSections = function(section, index) {
       // current section is main page, scroll right to indicated page
       $('.port-pages').animate({ left: 0 }, 700);
       $('#' + pages[index]).animate({ left: 0 }, 700);
-      $('#home').animate({ left: '-100%' }, 700);
+      $('#home').animate({ left: '-100%' }, 700, function() { resolve() });
     } else {
       // current section is portfolio, scroll left to main section
       $('.port-pages').animate({ left: '100%' }, 700);
       $('#' + pages[index]).animate({ left: '100%' }, 700);
-      $('#home').animate({ left: 0 }, 700);
+      $('#home').animate({ left: 0 }, 700, function() { resolve() });
     }
-    resolve();
   });
 };
 
@@ -100,5 +109,18 @@ var resetPages = function(skipIndex) {
   }
   for (var i = skipIndex + 1; i < pages.length; i++) {
     $('#' + pages[i]).css({ left: '100%' });
+  }
+}
+
+/* setOpacityForAllExcept
+ * Sets the opacity of all pages excepty for the skipped index to the desired opacity
+ * @param skipIndex, the index to be skipped
+ * @param opacity, the desire opacity in range [0..1]
+ */
+var setOpacityForAllExcept = function(skipIndex, opacity) {
+  for (var i = 0; i < pages.length; i++) {
+    if (i != skipIndex) {
+      $('#' + pages[i]).css({ opacity: opacity });
+    }
   }
 }
