@@ -1,0 +1,111 @@
+html {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("images/construction.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: -99;
+    filter: blur(3px);
+}
+
+.main-content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .content-pane {
+    background-color: rgba(100, 100, 100, .85);
+    height: 70%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-content .content-pane .title {
+    color: #FFFFFF;
+    font-family: 'Rokkitt', serif;
+    font-size: 32pt;
+}
+
+.main-content .content-pane .react-logo {
+    width: 10%;
+    animation: infinite-spin;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.main-content .content-pane .info {
+    color: #FFFFFF;
+    font-family: 'Cabin', sans-serif;
+    font-size: 16pt;
+    margin: 0 10px;
+}
+
+.main-content .content-pane .info p a{
+    color: #FFFFFF;
+    transition: color .3s linear;
+}
+
+.main-content .content-pane .info p a:hover {
+    color: #0000FF;
+}
+
+.main-content .content-pane .buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+}
+
+.main-content .content-pane .buttons .button {
+    background: none;
+    border: 2px solid #00d8ff;
+    height: 50px;
+    width: 120px;
+    color: #00d8ff;
+    border-radius: 5px;
+    font-size: 12pt;
+    font-weight: normal;
+    transition: all .3s ease-in-out;
+}
+
+/* .main-content .content-pane .buttons .button:hover {
+    background-color: rgba(200, 200, 200, .7);
+} */
+
+.main-content .content-pane .buttons .contact-button {
+    background-color: #00d8ff;
+    color: rgba(100, 100, 100, .85);
+    transition: all .3s ease-in-out;
+}
+
+.main-content .content-pane .buttons .button:hover {
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+@keyframes infinite-spin {
+    0% { transform: rotate(0deg) }
+    25% { transform: rotate(90deg) }
+    50% { transform: rotate(180deg) }
+    75% { transform: rotate(270deg) }
+    100% { transform: rotate(360deg) }
+}
